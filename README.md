@@ -2,6 +2,8 @@
 
 ## JavaScript
 
+- [Bitwise](./JavaScript/Bitwise.md)
+
 ## TypeScript
 
 ## NodeJS
