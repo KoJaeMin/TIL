@@ -101,3 +101,36 @@
 - 프로세스 제어를 위한 System Call에는 fork, exec, wait 등이 있습니다.
 
 </details>
+
+<details>
+  <summary>PCB란 무엇인가요?</summary>
+  <br>
+
+- **Process Control Block**으로 process 정보를 저장하는 곳입니다.
+- `Context Switching`시 이전 작업을 저장하기 위해서 필요합니다. 
+- `Linked List`방식으로 관리합니다.
+
+</details>
+
+<details>
+  <summary>Context Switching이란 무엇인가요?</summary>
+  <br>
+
+- CPU가 이전의 프로세스 상태를 PCB에 보관 후 다른 프로세스 정보를 PCB에 읽어 레지스터에 적재하는 과정입니다.
+- CPU가 놀지 않게 만들며 빠른 일처리를 제공하기 위한 것입니다.
+- 보통 Interrupt 또는 CPU 사용 허가 시간 초과시 발생
+
+
+![프로세스 상태](../image/ProcessState.jpeg)
+
+</details>
+
+<details>
+  <summary>IPC란 무엇인가요?</summary>
+  <br>
+
+- 프로세스는 독립적인 구조를 가지기에 통신을 해야합니다. 이를 가능하게 해주는 것이 Inter Process Communication이라 불리는 IPC통신입니다.
+- 프로세스는 커널이 제공하는 IPC설비를 이용해 프로세스간 통신을 할 수 있게 됩니다.
+- IPC 통신에서 프로세스 간 데이터를 동기화하고 보호하기 위해 `세마포어`와 `뮤텍스`를 사용합니다.
+
+</details>
