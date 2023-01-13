@@ -134,3 +134,25 @@
 - IPC 통신에서 프로세스 간 데이터를 동기화하고 보호하기 위해 `세마포어`와 `뮤텍스`를 사용합니다.
 
 </details>
+
+<details>
+  <summary>CPU 스케줄링에 대하여 설명해 주세요.</summary>
+  <br>
+
+- 정해져 있는 자원을 분배하여 프로세스가 CPU를 사용할 수 있게 결정하는 정책입니다.
+- 종류로는 크게 선점(preemptive) 스케불링과 비선점(non-preemptive) 스케줄링으로 나누어져있습니다.
+
+- 선점(preemptive) 스케줄링
+  - 하나의 프로세스가 CPU를 할당받아 실행하고 있을 때, 우선순위가 높은 프로세스가 CPU를 강제로 빼앗아 사용할 수 있는 기법입니다.
+  - 처리 시간 예측이 어렵고 선점으로 인한 오버헤드가 발생한다는 단점이 있습니다.
+  - ex) `Priority Scheduling`, `Round Robin`, `Multilevel-Queue(다단계 큐)`, `Multilevel-Feedback-Queue(다단계 피드백 큐)`
+
+- 비선점(non-preemptive) 스케줄링
+  - 이미 할당된 CPU를 다른 프로세스가 강제로 배앗아 사용할 수 없는 기법입니다.
+  - 공정하며 처리 시간 예측이 용이하다는 장점이 있지만 긴급응답을 요청하는 작업에는 좋지 않다는 단점도 존재합니다.
+  - ex) `FCFS(First Come First Served)`, `SJF(Shortest Job First)`, `HRN(Highest Response-ratio Next)`
+
+- 척도
+  - `Response Time` : 작업이 처음 실행되기까지 걸린 시간
+  - `Turnaround Time` : 실행 시간과 대기 시간을 모두 합한 시간으로 작업이 완료될 때 까지 걸리는 시간
+</details>
