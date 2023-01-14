@@ -155,4 +155,15 @@
 - 척도
   - `Response Time` : 작업이 처음 실행되기까지 걸린 시간
   - `Turnaround Time` : 실행 시간과 대기 시간을 모두 합한 시간으로 작업이 완료될 때 까지 걸리는 시간
+
+</details>
+
+<details>
+  <summary>데드락(교착 상태)가 뭔가요? 발생 조건에 대해 말해보세요.</summary>
+  <br>
+
+- 교착 상태로 두 개 이상의 프로세스나 스레드가 무한히 다음 자원을 기다리며 다음 처리를 못하는 상태입니다.
+- 발생조건으로는 `상호배제(Mutual exclusion)`, `점유 대기(Hold and wait)`, `비선점(Non-Preemptive)`, `순환 대기(Circular wait)`가 있습니다.
+- 처리 방법으로는 `예방(Prevent)`, `회피(Avoidance)`, `탐지(Detection)`, `회복(Recovery)`이있습니다.
+
 </details>
