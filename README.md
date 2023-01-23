@@ -14,6 +14,8 @@
 
 ## NestJS
 
+- [DTO](./NestJS/DTO/DTO.md)
+
 ## ORM
 
 ## Interview Study
@@ -31,6 +33,6 @@
 - [4z8l - tech_interview.zip](https://github.com/4z7l/tech_interview.zip)
 - [brave-people - brave-tech-interview](https://github.com/brave-people/brave-tech-interview)
 
-## Program, Programming, Programmer(실용주의 프로그래머)
+## Book
 
-- [실용주의 프로그래머](./PPP/README.md)
+- [실용주의 프로그래머](./Book/PPP.md)
