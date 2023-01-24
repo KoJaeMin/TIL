@@ -3,6 +3,7 @@
 ## JavaScript
 
 - [Bitwise](./JavaScript/Bitwise.md)
+- [DataType](./JavaScript/DataType.md)
 
 ## TypeScript
 
@@ -15,6 +16,7 @@
 ## NestJS
 
 - [DTO](./NestJS/DTO/DTO.md)
+- [DI](./NestJS/DI/DependencyInjection.md)
 
 ## ORM
 
