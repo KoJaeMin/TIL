@@ -2,6 +2,7 @@
 
 ## DI란
 - Dependency Injection의 약자로 의존성 주입 또는 의존관계 주입이라 부른다.
+- 의존성을 분리시켜 사용하며 결합도를 낮추는 작업이다.
 
 ## 의존성이란?
 - 쉽게 말하면 A와 B가 존재할 경우 A가 변하는 것에 의해 B도 변한다면 **B가 A에 대한 의존성을 갖는다** 라고 말 할 수 있다.
@@ -38,12 +39,39 @@ class B{
     }
 }
 
-let instanceA = new A();
-let instanceB = new B(instanceA);
+let instanceB = new B(new A());
 console.log(instanceB['a'].num);
 /// 1
 ```
 
+## 의존성 분리
+- 의존관계 역전의 원칙으로 의존관계를 분리시킨다.
+- 아래의 코드처럼 인터페이스를 이용하여 의존성을 분리시킬 수 있다.
+```typescript
+interface DIinterface{
+    num : number
+}
+
+class A implements DIinterface{
+    public num : number = 1;
+}
+
+class C implements DIinterface{
+    public num : number = 2;
+}
+
+class B{
+    private a : DIinterface;
+    constructor(a : DIinterface){
+        this.a = a;
+    }
+}
+
+let instanceB0 = new B(new A());
+let instanceB1 = new B(new C());
+console.log(instanceB0['a'].num);// 1
+console.log(instanceB1['a'].num);// 2
+```
 
 ### Reference
 - [견고한 node.js 프로젝트 설계하기](https://velog.io/@hopsprings2/%EA%B2%AC%EA%B3%A0%ED%95%9C-node.js-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%95%84%ED%82%A4%ED%85%8D%EC%B3%90-%EC%84%A4%EA%B3%84%ED%95%98%EA%B8%B0#%EC%9D%98%EC%A1%B4%EC%84%B1-%EC%A3%BC%EC%9E%85-)
