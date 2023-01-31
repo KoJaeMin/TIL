@@ -52,3 +52,4 @@ describe('QuestionsService', () => {
 ### Reference
 - [NestJS Testing](https://velog.io/@1yongs_/NestJS-Testing-Jest)
 - [Jest로 테스트 커버리지 수집하기](https://www.daleseo.com/jest-coverage/)
+- [설마 아직도 테스트 코드를 작성 안 하시나요?](https://ssowonny.medium.com/%EC%84%A4%EB%A7%88-%EC%95%84%EC%A7%81%EB%8F%84-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%BD%94%EB%93%9C%EB%A5%BC-%EC%9E%91%EC%84%B1-%EC%95%88-%ED%95%98%EC%8B%9C%EB%82%98%EC%9A%94-b54ec61ef91a)
