@@ -48,6 +48,35 @@ describe('QuestionsService', () => {
 
 ## End-to-end Test
 - 사용자가 취할만한 액션들을 처음부터 끝까지 테스트하는 것을 의미한다.
+- 용자 중심으로 처음부터 끝까지 어플리케이션 흐름을 테스트하는 소프트웨어 테스트 방법이다.
+- NestJS를 처음 사용하면 test라는 디렉토리 안에 `app.e2e-spec.ts`라는 파일이 존재하며 이는 e2e 테스트를 진행할 때 사용한다. 사용법은 unit test와 비슷하며 기본적으로 아래와 같이 되어있다.
+
+```typescript
+import { Test, TestingModule } from '@nestjs/testing';
+import { INestApplication } from '@nestjs/common';
+import * as request from 'supertest';
+import { AppModule } from '../src/app.module';
+
+describe('AppController (e2e)', () => {
+  let app: INestApplication;
+
+  beforeEach(async () => {
+    const moduleFixture: TestingModule = await Test.createTestingModule({
+      imports: [AppModule],
+    }).compile();
+
+    app = moduleFixture.createNestApplication();
+    await app.init();
+  });
+
+  it('/ (GET)', () => {
+    return request(app.getHttpServer())
+      .get('/')
+      .expect(200)
+      .expect('Hello World!');
+  });
+});
+```
 
 ### Reference
 - [NestJS Testing](https://velog.io/@1yongs_/NestJS-Testing-Jest)
