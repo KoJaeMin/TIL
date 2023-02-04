@@ -34,3 +34,42 @@ foo = true // foo가 이제 불리언
 자바스크립트는 객체(object) 기반의 스크립트 언어로서 자바스크립트를 이루고 있는 거의 “모든 것”이 객체이다. 원시 타입(Primitives)을 제외한 나머지 값들(배열, 함수, 정규표현식 등)은 모두 객체이다. 또한 객체는 **call-by-reference(참조에 의한 전달)** 방식으로 전달된다.
 
 - Object
+    - JavaScript의 객체는 **키(key)** 과 **값(value)** 으로 구성된 **프로퍼티(Property)** 들의 집합이다.
+    - 자바스크립트의 객체는 객체지향의 상속을 구현하기 위해 **프로토타입(prototype)** 이라고 불리는 객체의 프로퍼티와 메소드를 상속받을 수 있다. 이 프로토타입은 타 언어와 구별되는 중요한 개념이다.
+    - 객체 생성 방법
+        - 객체 리터럴
+            가장 일반적인 자바스크립트의 객체 생성 방식으로 중괄호({})를 사용하여 객체를 생성하는데 {} 내에 1개 이상의 프로퍼티를 기술하면 해당 프로퍼티가 추가된 객체를 생성할 수 있다. {} 내에 아무것도 기술하지 않으면 빈 객체가 생성된다.
+            ```javascript
+            let emptyObject = {};
+            let persion = {
+                name: 'Gildong'
+            }
+            ```
+        - Object 생성자 함수
+            new 연산자와 Object 생성자 함수를 호출하여 빈 객체를 생성할 수 있다. 빈 객체 생성 이후 프로퍼티 또는 메소드를 추가하여 객체를 완성하는 방법이다.
+            ```javascript
+            // 빈 객체의 생성
+            var person = new Object();
+            // 프로퍼티 추가
+            person.name = 'Lee';
+            ```
+        - 생성자 함수
+        es6이전 버전은 Class가 없기에 생성자 함수를 사용한다. es6 버전부터는 Class라는 것을 이용한다. (여기서 Class는 사실 함수이다.)
+        ```javascript
+        // 생성자 함수
+        function Person(name, gender) {
+            this.name = name;
+            this.gender = gender;
+            this.sayHello = function(){
+                console.log('Hi! My name is ' + this.name);
+          };
+        }
+        // 인스턴스의 생성
+        var person1 = new Person('Lee', 'male');
+        ```
+
+
+### Reference
+- [데이터 타입과 변수](https://poiemaweb.com/js-data-type-variable)
+- [객체](https://poiemaweb.com/js-object)
+- [프로토타입의 이해](https://www.nextree.co.kr/p7323/)
