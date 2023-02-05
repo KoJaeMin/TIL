@@ -72,4 +72,3 @@ foo = true // foo가 이제 불리언
 ### Reference
 - [데이터 타입과 변수](https://poiemaweb.com/js-data-type-variable)
 - [객체](https://poiemaweb.com/js-object)
-- [프로토타입의 이해](https://www.nextree.co.kr/p7323/)
