@@ -123,6 +123,10 @@
 
 ![프로세스 상태](../image/ProcessState.jpeg)
 
+
+
+### 비동기 처리의 장점
+  - context switching 발생하지 않는다.
 </details>
 
 <details>
