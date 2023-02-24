@@ -43,3 +43,22 @@
 - HTTP, FTP, DNS 등
 
 </details>
+
+<details>
+  <summary>TCP와 UDP에 대하여 설명하고 차이점에 대하여 이야기해 주세요.</summary>
+  <br>
+
+## TCP
+- Transmission Control Protocol의 약자로 연결형 서비스를 지원하는 전송계층 프로토콜입니다.
+- host간 신뢰성있는 데이터 전달과 흐름제어 및 혼잡제어를 제공합니다.
+- 신뢰성이 없는 인터넷을 통해 종단간에 신뢰성 있는 바이트 스트림을 전송 하도록 특별히 설계되었습니다.
+
+## UDP
+- User Datagram Protocol의 약자로비연결형 프로토콜입니다.
+- 신뢰성은 낮지만 TCP보다는 속도가 빠릅니다.
+- HTTP/3에서 QUIC이라는 프로토콜과 함께 사용됩니다.
+- UDP를 사용하는 것들 중 DNS가 있습니다.
+
+![TCP와 UDP의 차이](../image/TCP%26UDP.png)
+
+</details>
