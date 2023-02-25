@@ -62,3 +62,26 @@
 ![TCP와 UDP의 차이](../image/TCP%26UDP.png)
 
 </details>
+
+<details>
+  <summary>TCP에서의 3 way handshake 와 4 way handshake에 대하여 설명해 주세요.</summary>
+  <br>
+
+- 3 way handshake은 연결 성립 과정이며 4 way handshake는 연결을 해제하는 과정을 말합니다.
+
+### 3 way handshake 과정
+  - 클라이언트가 서버에게 SYN 패킷을 보냄 (sequence : x)
+  - 서버가 SYN(x)을 받고, 클라이언트로 받았다는 신호인 ACK와 SYN 패킷을 보냄 (sequence : y, ACK : x + 1)
+  - 클라이언트는 서버의 응답은 ACK(x+1)와 SYN(y) 패킷을 받고, ACK(y+1)를 서버로 보냄
+
+![3 way handshake 과정](../image/3%20way%20handshake%20%EA%B3%BC%EC%A0%95.png)
+
+### 4 way handshake 과정
+  - 클라이언트는 서버에게 연결을 종료한다는 FIN 플래그를 보낸다.
+  - 서버는 FIN을 받고, 확인했다는 ACK를 클라이언트에게 보낸다. (이때 서버는 모든 데이터를 보내기 위해 CLOSE_WAIT 상태가 되며 소켓을 닫는다 (Closed))
+  - 데이터를 모두 보냈다면, 연결이 종료되었다는 FIN 플래그를 클라이언트에게 보낸다.
+  - 클라이언트는 FIN을 받고, 확인했다는 ACK를 서버에게 보낸다. (아직 서버로부터 받지 못한 데이터가 있을 수 있으므로 TIME_WAIT을 통해 기다린다. TIME_WAIT 시간이 끝나면 클라이언트도 닫는다.)
+ 
+![4 way handshake 과정](../image/4%20way%20handshake%20%EA%B3%BC%EC%A0%95.png)
+
+</details>
