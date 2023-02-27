@@ -71,7 +71,7 @@
   <br>
 
 - 트랜잭션이란 데이터베이스의 상태를 변화시키기 위해 수행하는 작업 단위입니다.
-- 특징으로는 `원자성(Atomicity)`, `일관성(Consistency)`, `독립성(Isolation)`, `독립성(Isolation)`이 있습니다.
+- 특징으로는 `원자성(Atomicity)`, `일관성(Consistency)`, `독립성(Isolation)`, `지속성(Durability)`이 있습니다.
 - 연산으로는 `Commit`, `RollBack`이 있습니다.
   
 </details>
