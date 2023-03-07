@@ -133,6 +133,7 @@
   <br>
 
 - Object Relational Mapping의 약자로 객체와 데이터베이스의 관계를 매핑해주는 도구입니다.
+- 종류로는 TypeORM, Sequelize, SQLAlchemy 등이 있습니다.
 
 ### 장점
 - 객체 지향적인 코드로 인해 더 직관적이고 비즈니스 로직에 더 집중할 수 있게 도와줍니다.
