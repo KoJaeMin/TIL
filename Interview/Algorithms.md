@@ -18,6 +18,19 @@ function bubbleSort(arr) {
 	}
 }
 ```
+```go
+func BubbleSort(arr []int) {
+	for i := 0; i < len(arr); i++ {
+		for j := i + 1; j < len(arr); j++ {
+			if arr[j-1] > arr[j] {
+				temp := arr[j-1]
+				arr[j-1] = arr[j]
+				arr[j] = temp
+			}
+		}
+	}
+}
+```
 
 ### 선택 정렬 (Selection Sort)
 - 해당 순서에 원소를 넣을 위치는 이미 정해져 있고, 어떤 원소를 넣을지 선택하는 알고리즘
@@ -40,6 +53,22 @@ function selectionSort(arr){
 }
 ```
 
+```go
+func SelectionSort(arr []int) {
+	for i := 0; i < len(arr); i++ {
+		index := i
+		for j := i + 1; j < len(arr); j++ {
+			if arr[index] > arr[j] {
+				index = j
+			}
+		}
+		temp := arr[i]
+		arr[i] = arr[index]
+		arr[index] = temp
+	}
+}
+```
+
 ### 삽입 정렬(Insertion Sort)
 - 2번째 원소부터 시작하여 그 앞(왼쪽)의 원소들과 비교하여 삽입할 위치를 지정한 후, 원소를 뒤로 옮기고 지정된 자리에 자료를 삽입 하여 정렬하는 알고리즘
 - 최선의 경우는 O(n), 평균과 최악의 경우 O(n^2) 의 시간복잡도
@@ -55,6 +84,19 @@ function insertionSort(arr){
 			pre--;
 		}
 		arr[pre+1] = temp;
+	}
+}
+```
+
+```go
+func InsertionSort(arr []int) {
+	for i := 0; i < len(arr); i++ {
+		temp := arr[i]
+		pre := i - 1
+		for ; pre >= 0 && arr[pre] > temp; pre-- {
+			arr[pre+1] = arr[pre]
+		}
+		arr[pre+1] = temp
 	}
 }
 ```
