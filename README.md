@@ -4,6 +4,7 @@
 
 - [Bitwise](./JavaScript/Bitwise.md)
 - [DataType](./JavaScript/DataType.md)
+- [Variable](./JavaScript/Variable.md)
 
 ## TypeScript
 
@@ -21,9 +22,17 @@
 
 ## ORM
 
+## FP
+- [FP](./FP/FP.md)
+
 ## Interview Study
 
+- [Algorithms](./Interview/Algorithms.md)
+- [DataStructure](./Interview/DataStructure.md)
+- [DB](./Interview/DB.md)
+- [Network](./Interview/Network.md)
 - [OS](./Interview/OS.md)
+- [Web](./Interview/Web.md)
 
 ## Interview
 
