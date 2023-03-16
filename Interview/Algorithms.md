@@ -100,3 +100,29 @@ func InsertionSort(arr []int) {
 	}
 }
 ```
+
+### 퀵 정렬(Quick Sort)
+- 분할 정복 알고리즘의 하나로, 평균적으로 매우 빠른 수행 속도를 자랑하는 정렬하는 알고리즘
+- 평균과 최선의 경우는 O(nlogn), 최악의 경우 O(n^2) 의 시간복잡도
+
+```javascript
+function quickSort (arr) {
+  if (arr.length <= 1)
+  	return arr;
+
+  const pivot = arr[0];
+  const leftArray = [];
+  const rightArray = [];
+
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] <= pivot)
+		leftArray.push(arr[i]);
+    else
+		rightArray.push(arr[i]);
+  }
+
+  const sortedLeftArray = quickSort(leftArray);
+  const sortedRightArray = quickSort(rightArray);
+  return [...sortedLeftArray, pivot, ...sortedRightArray];
+}
+```
