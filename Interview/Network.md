@@ -98,3 +98,24 @@
   - Sliding Window (Go Back N ARQ) : 수신측에서 설정한 윈도우 크기만큼 송신측에서 확인응답없이 세그먼트를 전송할 수 있게 하여 데이터 흐름을 동적으로 조절하는 제어기법
 
 </details>
+
+<details>
+  <summary>HTTP에 대하여 설명해 주세요.</summary>
+  <br>
+
+- HyperText Transfer Protocol의 약자로 인터넷에서 데이터를 주고받을 때 사용하는 통신 규약입니다.
+- OSI 7 layer 중 7계층에서 사용하는 프로토콜입니다.
+- HTTP/1.1, HTTP/2는 TCP를 사용하며 HTTP/3는 UDP를 사용합니다.
+
+### 특징
+  - Client-Server 구조
+  - 무상태성(Stateless)
+    - 서버가 클라이언트의 상태를 저장하지 않는다는 것
+    - Request를 보낼 때 Client가 추가 데이터를 전송해야한다는 문제점이 존재
+    - 항상 같은 서버에 연결될 필요가 없으므로 Scale-Up에 유리
+  - 비연결성(Connectionless)
+    - 요청을 한 후 응답을 받으면 바로 연결을 종료합니다.즉, 불필요한 연결을 하지 않아 서버 유지 자원이 감소합니다.
+    - 서버 유지 자원을 효율적으로 사용 가능합니다.
+  - 단순/확장 가능
+
+</details>
