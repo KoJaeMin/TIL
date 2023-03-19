@@ -126,3 +126,75 @@ function quickSort (arr) {
   return [...sortedLeftArray, pivot, ...sortedRightArray];
 }
 ```
+
+```go
+func QuickSort(arr []int) []int {
+	if len(arr) <= 1{
+		return arr;
+	}
+
+	pivot := arr[0]
+	lowPart := make([]int, 0, len(arr))
+	highPart := make([]int, 0, len(arr))
+	middlePart := make([]int, 0, len(arr))
+
+	for _, item := range arr {
+		switch {
+		case item < median:
+			lowPart = append(lowPart, item)
+		case item == median:
+			middlePart = append(middlePart, item)
+		case item > median:
+			highPart = append(highPart, item)
+		}
+	}
+
+	lowPart = quickSort(lowPart)
+	highPart = quickSort(highPart)
+
+	lowPart = append(lowPart, middlePart...)
+	lowPart = append(lowPart, highPart...)
+
+	return lowPart
+}
+```
+
+### 합병 정렬(Merge Sort)
+- 분할 정복 알고리즘의 하나로, 요소를 쪼갠 후, 다시 합병시키면서 정렬해나가는 방식으로 정렬하는 알고리즘
+- 평균과 최선, 최악의 경우 O(nlogn)
+
+```javascript
+function mergeSort(arr){
+    let left = 0, right = arr.length - 1;
+    divide(arr,left,right);
+}
+
+function divide(arr, left, right){
+    if(left < right){
+        const mid = Math.floor((left+right)/2);
+        divide(arr,left,mid);
+        divide(arr,mid+1,right);
+        conquer(arr,left,mid,right);
+    }
+}
+
+function conquer(arr,left,mid,right){
+    const LeftArray = arr.slice(left,mid+1);
+    const RightArray = arr.slice(mid+1,right+1);
+    let i = 0, j = 0, index = left;
+    const LeftLength = LeftArray.length, RightLength = RightArray.length;
+
+    while(i < LeftLength && j < RightLength){
+        arr[index] = LeftArray[i] <= RightArray[j] ? LeftArray[i++] : RightArray[j++];
+        index++;
+    }
+    
+    while(i < LeftLength){
+        arr[index++] = LeftArray[i++];
+    }
+    
+    while(j < RightLength){
+        arr[index++] = RightArray[j++];
+    }
+}
+```
