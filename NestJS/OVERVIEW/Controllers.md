@@ -22,3 +22,8 @@ findAll(): Observable<any[]> {
   return of([]);
 }
 ```
+
+## Request payloads
+- POST 라우터 핸들러는 어떤 클라이언트 파라미터를 허용하지 않는다. 그렇기에 @Body() 데코레이터를 이용해야한다.
+- @Body() 데코레이터에는 DTO를 설정하여야한다. DTO는 TypeScript의 interface를 이용하여 설정할 수 있다.
+- TypeScript 인터페이스는 변환 중에 제거되기 때문에 Nest는 런타임에 이를 참조할 수 없다. 그리하여 ValidationPipe을 이용하여 런타임에도 적용시킬 수 있다.
