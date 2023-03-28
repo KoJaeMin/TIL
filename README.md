@@ -8,6 +8,11 @@
 
 ## TypeScript
 
+- Type
+    - [타입 선언/ 타입 추론/ 타입 단언](./TypeScript/Type/%EC%84%A0%EC%96%B8%EC%B6%94%EB%A1%A0%EB%8B%A8%EC%96%B8.md)
+- 제네릭(Generic)
+    - [Generic](./TypeScript/Generic/Generic.md)
+
 ## NodeJS
 
 ## Go
@@ -16,6 +21,8 @@
 
 ## NestJS
 
+- OVERVIEW
+    - [Controllers](./NestJS/OVERVIEW/Controllers.md)
 - [DTO](./NestJS/DTO/DTO.md)
 - [DI](./NestJS/DI/DependencyInjection.md)
 - [Test](./NestJS/Test/Test.md)
