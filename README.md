@@ -26,6 +26,7 @@
 - [DTO](./NestJS/DTO/DTO.md)
 - [DI](./NestJS/DI/DependencyInjection.md)
 - [Test](./NestJS/Test/Test.md)
+    - [Jest 사용시 모듈 경로 이슈 해결하기](./NestJS/Test/Issue/Jest%20%EC%82%AC%EC%9A%A9%EC%8B%9C%20%EB%AA%A8%EB%93%88%20%EA%B2%BD%EB%A1%9C%20%EC%9D%B4%EC%8A%88%20%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0.md)
 
 ## ORM
 
