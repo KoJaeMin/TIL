@@ -80,11 +80,6 @@ let instanceB1 = new B(new C());
 console.log(instanceB0['a'].num);// 1
 console.log(instanceB1['a'].num);// 2
 ```
-
-## IoC(Inversion of Control, 제어의 역전)
-- IoC는 메소드나 객체의 호출작업을 개발자가 결정하는 것이 아니라, 외부에서 결정되는 것을 의미한다.
-- NestJS에서 Provider 간의 관계를 관리하는 ("IoC") 컨테이너가 있다.
-
 ```typescript
 /// interface가 제어의 주체가 된다.
 interface DIinterface{
@@ -111,6 +106,11 @@ let instanceB1 = new B(new C());
 console.log(instanceB0['a'].num);// error
 console.log(instanceB1['a'].num);// error
 ```
+
+## IoC(Inversion of Control, 제어의 역전)
+- IoC는 메소드나 객체의 호출작업을 개발자가 결정하는 것이 아니라, 외부에서 결정되는 것을 의미한다.
+- NestJS에서 Provider 간의 관계를 관리하는 ("IoC") 컨테이너가 있다.
+
 
 ### Reference
 - [견고한 node.js 프로젝트 설계하기](https://velog.io/@hopsprings2/%EA%B2%AC%EA%B3%A0%ED%95%9C-node.js-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%95%84%ED%82%A4%ED%85%8D%EC%B3%90-%EC%84%A4%EA%B3%84%ED%95%98%EA%B8%B0#%EC%9D%98%EC%A1%B4%EC%84%B1-%EC%A3%BC%EC%9E%85-)
