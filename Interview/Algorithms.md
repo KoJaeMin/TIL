@@ -21,7 +21,7 @@ function bubbleSort(arr) {
 ```go
 func BubbleSort(arr []int) {
 	for i := 0; i < len(arr); i++ {
-		for j := i + 1; j < len(arr); j++ {
+		for j := 1; j < len(arr) - i; j++ {
 			if arr[j-1] > arr[j] {
 				temp := arr[j-1]
 				arr[j-1] = arr[j]

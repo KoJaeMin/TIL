@@ -70,9 +70,9 @@
 - 3 way handshake은 연결 성립 과정이며 4 way handshake는 연결을 해제하는 과정을 말합니다.
 
 ### 3 way handshake 과정
-  - 클라이언트가 서버에게 SYN 패킷을 보냄 (sequence : x)
-  - 서버가 SYN(x)을 받고, 클라이언트로 받았다는 신호인 ACK와 SYN 패킷을 보냄 (sequence : y, ACK : x + 1)
-  - 클라이언트는 서버의 응답은 ACK(x+1)와 SYN(y) 패킷을 받고, ACK(y+1)를 서버로 보냄
+  - 클라이언트가 서버에게 SYN 플래그를 보냄 (sequence : x)
+  - 서버가 SYN(x)을 받고, 클라이언트로 받았다는 신호인 ACK와 SYN 플래그를 보냄 (sequence : y, ACK : x + 1)
+  - 클라이언트는 서버의 응답은 ACK(x+1)와 SYN(y) 플래그를 받고, ACK(y+1)를 서버로 보냄
 
 ![3 way handshake 과정](../image/3%20way%20handshake%20%EA%B3%BC%EC%A0%95.png)
 
