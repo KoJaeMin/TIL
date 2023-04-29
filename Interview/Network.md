@@ -1,4 +1,4 @@
-## 네트워크
+# 네트워크
 
 <details>
   <summary>OSI 7 계층에 대하여 설명해 주세요.</summary>

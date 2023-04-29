@@ -36,6 +36,9 @@
 ## FP
 - [FP](./FP/FP.md)
 
+## CI
+- [CI란](./CI/CI%EB%9E%80.md)
+
 ## Interview Study
 
 - [Algorithms](./Interview/Algorithms.md)

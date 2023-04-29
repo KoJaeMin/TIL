@@ -1,6 +1,4 @@
-# Operating System
-
-## 운영체제
+# Operating System(운영체제)
 
 <details>
   <summary>운영체제란 무엇인가요?</summary>

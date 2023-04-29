@@ -1,4 +1,4 @@
-## 자료구조
+# 자료구조
 
 <details>
   <summary>해시(Hash)에 대하여 설명해 주세요.</summary>

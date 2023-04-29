@@ -1,4 +1,4 @@
-## 웹
+# Web(웹)
 
 <details>
   <summary>REST API에 대하여 설명해 주세요.</summary>
@@ -106,12 +106,16 @@
 
 - 장점
   - 확장성이 용이하다. JWT는 토큰 자체에 사용자의 정보가 저장되어 있어있기 때문에 서버 입장에서 토큰을 검증만 해주면 되기 때문입니다.
-  - 쿠키를 사용하지 않으므로 CORS 문제에서 자유로워진다
+  - 쿠키를 사용하지 않으므로 CORS 문제에서 자유로워진다.
 
-
+- 한계
+ - 어느 정도 규모가 있는 서비스에서 사용자 인증 용도로 JWT를 사용하기에는 부족한 경우가 있습니다.
+  - 현재 로그인된 사용자의 모든 장비들을 나열
+  - 특정 장비에서 로그아웃을 허용하는 기능을 구현
 
 </details>
 
 
 ### Reference
 - [쿠키(Cookie), 세션(Session) 특징 및 차이](https://hahahoho5915.tistory.com/32)
+- [JWT - Json Web Token](https://www.daleseo.com/jwt/)
