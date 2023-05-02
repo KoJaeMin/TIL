@@ -32,6 +32,7 @@ import { Category } from '../entities/category.entity';
 
 2. jest의 디렉토리를 매핑해 준다. 먼저 아래와 같이 `package.json`에 jest설정이 기본적으로 되어 있다.
 ```json
+/// package.json
 "jest": {
     // ...
     // 생략
@@ -48,6 +49,7 @@ import { Category } from '../entities/category.entity';
 ```
 결론적으로 아래와 같이 된다.
 ```json
+/// package.json
 "jest": {
      // ...
     // 생략
@@ -57,5 +59,22 @@ import { Category } from '../entities/category.entity';
     "moduleNameMapper": {
       "^src/(.*)$": "<rootDir>/$1"
     }
+}
+```
+이 방법을 써서 unit test는 정상적으로 작동하나 e2e test에서는 작동을 하지 않는다.
+
+이를 해결하기 위해서 아래와 같이 e2e test의 설정을 해주면 e2e test에도 적용된다.
+
+```json
+/// jest-e2e.json
+{
+  "moduleFileExtensions": ["js", "json", "ts"],
+  "rootDir": ".",
+  "testEnvironment": "node",
+  "testRegex": ".e2e-spec.ts$",
+  "transform": {
+    "^.+\\.(t|j)s$": "ts-jest"
+  },
+  "moduleDirectories": ["<rootDir>/../", "node_modules"]
 }
 ```
