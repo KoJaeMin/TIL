@@ -41,3 +41,133 @@
 - 레벨 순회(level-order) : 루트(Root)부터 계층 별로 방문하는 방식입니다.
 
 </details>
+
+<details>
+  <summary>힙(heap)에 대하여 설명해 주세요.</summary>
+  <br>
+
+- 우선순위 큐를 위해 만들어진 자료구조입니다.
+- 완전 이진 트리의 일종이며 반 정렬 상태입니다. 삽입과 삭제의 시간 복잡도가 O(logN)입니다.
+- 여러 값 중, 최대값과 최소값을 빠르게 찾아내도록 만들어진 자료구조입니다.
+
+### 종류
+- 최대 힙(max heap)
+- 최소 힙(min heap)
+
+### 구현
+- maxheap(class version)
+```javascript
+class maxheap{
+    constructor() {
+        this.heap = [];
+    }
+
+    swap(a,b){
+        [this.heap[a],this.heap[b]] = [this.heap[b],this.heap[a]];
+    }
+
+    size(){
+        return this.heap.length;
+    }
+
+    add(value){
+        this.heap.push(value);
+        let ind = this.size() - 1;
+        let parent = Math.floor((ind-1)/2);
+        while(value > this.heap[parent]){
+            this.swap(ind,parent);
+            ind = parent;
+            parent = Math.floor((ind-1)/2);
+        }
+    }
+
+    del(){
+        if(this.size() === 0)
+            return -1
+        const last = this.size() - 1;
+        let ind = 0;
+        this.swap(ind,last);
+        const temp = this.heap.pop();
+
+        while(ind < last){
+            let left = ind * 2 + 1, right = ind * 2 + 2;
+            if(left >= last)
+                break
+            else if(right >= last){
+                if(this.heap[left] > this.heap[ind]){
+                    this.swap(ind,left);
+                    ind = left;
+                }
+                else
+                    break;
+            }
+            else{
+                if(this.heap[left] < this.heap[right]){
+                    if(this.heap[right] > this.heap[ind]){
+                        this.swap(right,ind);
+                        ind = right;
+                    }
+                    else
+                        break;
+                }
+                else{
+                    if(this.heap[left] > this.heap[ind]){
+                        this.swap(left,ind);
+                        ind = left;
+                    }
+                    else
+                        break;
+                }
+            }
+        }
+        return temp;
+    }
+}
+```
+- minheap (array version)
+```javascript
+let minheap = [];
+
+function insert(heap, num){
+    heap.push(num);
+    let ind = heap.length;
+    while(ind>1){
+        if(heap[Math.floor(ind/2)-1]>heap[ind-1]){
+                const temp = heap[ind-1];
+                heap[ind-1] = heap[Math.floor(ind/2)-1];
+                heap[Math.floor(ind/2)-1] = temp;
+                ind = Math.floor(ind/2);
+        }
+        else{
+            break;
+        }
+    }
+    return heap;
+}
+
+function del(heap){
+    heap[0] = heap[heap.length-1];
+    heap.pop();
+    const len = heap.length;
+    let ind = 1;
+    while(ind*2<=len){
+        if(heap[ind-1]>heap[ind*2-1] && (heap[2*ind]===undefined ||heap[ind*2-1] < heap[ind*2])){
+            const temp = heap[ind*2-1];
+            heap[ind*2-1] = heap[ind-1];
+            heap[ind-1] = temp;
+            ind = ind*2
+        }
+        else if(heap[ind-1]>heap[ind*2]){
+            const temp = heap[ind*2];
+            heap[ind*2] = heap[ind-1];
+            heap[ind-1] = temp;
+            ind = ind*2+1
+        }
+        else
+            break;
+    }
+    return heap
+}
+```
+
+</details>
