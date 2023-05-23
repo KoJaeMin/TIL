@@ -25,3 +25,11 @@ Nest 어플리케이션은 `request lifecycle`이라 불리는 순서로 request
 18. Global interceptor (post-request)
 19. Exception filters (route, then controller, then global)
 20. Server response
+![Request LifeCycle](../../image/request%20lifecycle.png)
+
+
+### Reference
+- [NestJS Docs - Request LifeCycle](https://docs.nestjs.com/faq/request-lifecycle)
+- [NestJs Request LifeCycle](https://dkrnfls.tistory.com/83)
+- [NestJS Request lifecycle](https://velog.io/@hshs0409/NestJS-Request-lifecycle)
+- [NestJS Interceptor와 Lifecycle](https://blog-ko.superb-ai.com/nestjs-interceptor-and-lifecycle/)
