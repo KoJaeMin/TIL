@@ -199,21 +199,21 @@ function conquer(arr,left,mid,right){
 }
 ```
 
-## 합병 정렬(Counting Sort)
+## 계수 정렬(Counting Sort)
 - `범위 조건`이 있는 경우에 한해서 굉장히 빠른 알고리즘
 - 시간 복잡도는 O(N)
 
 ```javascript
 function countingSort (arr, min, max) {
 	let answer = new Array(arr.length).fill(0);
-	let matrix = new Array(max + 1).fill(min - 1);
+	let matrix = new Array(max + 1).fill(0);
 	for(let i = 0; i < arr.length; i++)
 		matrix[arr[i]]++;
 	let j = 0;
 	for(let i = min; i <=max; i++){
-		if(matrix[i] > min - 1){
+		while(matrix[i] > 0){
 			answer[j++] = i;
-			matrix[i--]--;
+			matrix[i]--;
 		}
 	}
 	return answer;
